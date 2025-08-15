@@ -96,9 +96,20 @@ function mostrarMensagem(msg) {
 
 // Botão fechar
 document.getElementById("btn-fechar").addEventListener("click", () => {
-    document.getElementById("resultado-container").style.display = "none";
-    document.getElementById("resultado-body").innerHTML = ""; // limpa sempre
+  document.getElementById("resultado-container").style.display = "none";
+  document.getElementById("resultado-body").innerHTML = ""; // limpa sempre
 });
+
+// Fecha a tela de usuários ao clicar nos botões de menu
+const botoes = document.querySelectorAll(".menu");
+botoes.forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.getElementById("resultado-container").style.display = "none";
+    document.getElementById("resultado-body").innerHTML = "";
+  });
+});
+
+
 
 function cadastro() {
   const nome = document.getElementById("nome-add").value;
