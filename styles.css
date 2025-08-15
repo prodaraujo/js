@@ -140,8 +140,10 @@ button:hover{
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 4px;
+    width: 5rem;
 }
 
 #btn-fechar:hover {
+    transition: ease-in-out 50ms;
     background: #cc0000;
 }
