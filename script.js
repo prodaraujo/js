@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
 // Atualiza a exibição sempre que mudar o hash
 window.addEventListener("hashchange", mostrarSecao);
 
-
+// GET
 function consultar() {
   const nome = document.getElementById("nome-src").value;
   const url = nome 
@@ -110,7 +110,7 @@ botoes.forEach(btn => {
 });
 
 
-
+// POST
 function cadastro() {
   const nome = document.getElementById("nome-add").value;
   const idade = document.getElementById("idade-add").value;
@@ -148,6 +148,8 @@ function cadastro() {
 
 }
 
+
+// DELETE
 function deletar() {
   const nome = document.getElementById("nome-del").value.trim();
 
@@ -195,6 +197,7 @@ function deletar() {
     });
 }
 
+// PATCH
 function editar() {
   const nome = document.getElementById("nome-upd").value.trim();
   if (!nome) {
