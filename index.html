@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de usuários</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>   
+        <ul>
+            <a href="#add"><li>Cadastro</li></a>
+            <a href="#src"><li>Consulta</li></a>
+            <a href="#upd"><li>Editar</li></a>
+            <a href="#del"><li>Deletar</li></a>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="add" class="page">
+            <h1>Cadastro de Usuários</h1>
+            <input id="nome-add" type="text" placeholder="Digite um nome">
+            <input id="idade-add" type="number" placeholder="Digite a idade">
+            <input id="email-add" type="email" placeholder="Digite o e-mail">
+            <button onclick="cadastro()">Adicionar</button>
+        </form>
+
+        <form id="src" class="page">
+            <h1>Consulta de Usuários</h1>
+            <input id="nome-src" type="text" placeholder="Digite um nome">
+            <button onclick="consultar()">Buscar</button>
+        </form>
+
+        <form id="upd" class="page">
+            <h1>Editar Usuários</h1>
+            <input id="nome-upd" type="text" placeholder="Digite um nome">
+            <button onclick="editar()">Editar</button>
+        </form>
+
+        <form id="del" class="page">
+            <h1>Deletar Usuários</h1>
+            <input id="nome-del" type="text" placeholder="Digite um nome">
+            <button onclick="deletar()">Apagar</button>
+        </form>
+
+        <div id="resultado-container" style="display:none;">
+        <button id="btn-fechar">Fechar</button>
+        <table id="resultado-tabela">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Email</th>
+            </tr>
+            </thead>
+            <tbody id="resultado-body"></tbody>
+        </table>
+        </div>
+     
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

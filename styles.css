@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    border: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+body{
+    background: linear-gradient(to right, rgb(38, 0, 255), rgb(102, 0, 255));
+    color: white;
+}
+
+ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 40vw;
+    height: 15vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: ease-in-out 300ms;
+}
+
+li:hover{
+    scale: 101%;
+    color: rgb(189, 127, 255);
+    transition: ease-in-out 300ms;    
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100vw;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+}
+
+.page{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+    height: 55vh;
+    width: 30vw;
+    position: absolute;
+    background: linear-gradient(to right, rgb(38, 0, 255), rgb(102, 0, 255));
+    border-radius: 20px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.411);
+}
+
+.hidden {
+  display: none;
+}
+
+input{
+    border-radius: 10px;
+    padding: 0.7rem;
+    width: 20vw;
+    font-size: large;
+}
+
+select{
+    border-radius: 10px;
+    padding: 0.7rem;
+    width: 21.5vw;
+    font-size: large;
+    color: rgb(78, 78, 78);
+}
+
+button{
+    border-radius: 10px;
+    padding: 0.7rem;
+    width: 21.5vw;
+    font-size: large;
+    background: linear-gradient(to right, rgb(1, 57, 179), rgb(100, 23, 151));
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.411);
+    color: white;
+    font-weight: bolder;
+    
+}
+
+button:hover{
+    scale: 101%;
+    background: linear-gradient(to right, rgb(15, 0, 103), rgb(70, 10, 159));
+    transition: ease-in-out 300ms;    
+}
+
+#resultado-container {
+    width: 30vw;
+    height: 55vh;
+    color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background: #f9f9f9;
+    position: relative;
+}
+
+#resultado-tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resultado-tabela th, #resultado-tabela td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#resultado-tabela th {
+    background: #e0e0e0;
+}
+
+#btn-fechar {
+    float: right;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#btn-fechar:hover {
+    background: #cc0000;
+}
