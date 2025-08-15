@@ -198,37 +198,44 @@ function deletar() {
 }
 
 // PATCH
-function editar() {
-  const nome = document.getElementById("nome-upd").value.trim();
+function editar(event) {
+  if (event) event.preventDefault(); // impede submit do form
+
+  const container = document.getElementById("upd");
+  const tituloOriginal = document.getElementById("titulo");
+  const inputName = document.getElementById("nome-upd");
+  const btnEditar = container.querySelector("button"); // pega o botão Editar dentro do form
+  const nome = inputName.value.trim();
+
   if (!nome) {
     alert("Digite um nome para buscar e editar.");
     return;
   }
 
+  // Esconde elementos originais
+  tituloOriginal.style.display = "none";
+  inputName.style.display = "none";
+  btnEditar.style.display = "none"; // esconde o botão Editar também
+
+  // Remove elementos dinâmicos antigos
+  document.querySelectorAll(".dinamico").forEach(el => el.remove());
+
+  // Busca usuário
   fetch(`http://localhost:3000/usuarios/consulta/${encodeURIComponent(nome)}`)
     .then(res => {
-      if (!res.ok) {
-        return res.text().then(msg => {
-          alert(msg || "Registro não encontrado.");
-          throw new Error("Registro não encontrado.");
-        });
-      }
+      if (!res.ok) throw new Error("Registro não encontrado.");
       return res.json();
     })
     .then(pessoa => {
-      console.log("Pessoa encontrada:", pessoa);
-
-      const container = document.getElementById("upd");
-      container.innerHTML = "";
-
-      const titulo = document.createElement("h1");
-      titulo.textContent = "Editar Usuário";
+      // --- Cria elementos dinâmicos ---
+      const titulo = document.createElement("h2");
+      titulo.textContent = `Editar Usuário ${nome }`;
+      titulo.classList.add("dinamico");
       container.appendChild(titulo);
 
-      // SELECT dos campos
       const select = document.createElement("select");
       select.id = "campo-selecionado";
-
+      select.classList.add("dinamico");
       Object.keys(pessoa).forEach(campo => {
         if (campo !== "id") {
           const option = document.createElement("option");
@@ -239,19 +246,23 @@ function editar() {
       });
       container.appendChild(select);
 
-      // INPUT para novo valor
       const input = document.createElement("input");
       input.type = "text";
       input.id = "novo-valor";
       input.placeholder = "Novo valor";
+      input.classList.add("dinamico");
       container.appendChild(input);
 
-      // Botão para enviar PATCH
-      const btn = document.createElement("button");
-      btn.textContent = "Atualizar";
-      btn.onclick = function () {
-        const campo = document.getElementById("campo-selecionado").value;
-        const novoValor = document.getElementById("novo-valor").value.trim();
+      const btnAtualizar = document.createElement("button");
+      btnAtualizar.textContent = "Atualizar";
+      btnAtualizar.type = "button"; // evita submit
+      btnAtualizar.classList.add("dinamico");
+      container.appendChild(btnAtualizar);
+
+      // --- Evento do botão PATCH ---
+      btnAtualizar.onclick = function () {
+        const campo = select.value;
+        const novoValor = input.value.trim();
 
         if (!novoValor) {
           alert("Digite o novo valor.");
@@ -265,16 +276,29 @@ function editar() {
         })
           .then(res => res.json())
           .then(resultado => {
-            console.log("Atualização:", resultado);
             alert(resultado.sucesso ? "Atualizado com sucesso!" : "Falha ao atualizar.");
+
+            // Remove elementos dinâmicos
+            document.querySelectorAll(".dinamico").forEach(el => el.remove());
+
+            // Mostra elementos originais novamente
+            tituloOriginal.style.display = "block";
+            inputName.style.display = "inline-block";
+            btnEditar.style.display = "inline-block"; // mostra botão Editar
+            inputName.value = ""; // limpa input
           })
-          .catch(err => console.error("Erro ao atualizar cliente:", err));
+          .catch(err => {
+            console.error("Erro ao atualizar cliente:", err);
+            tituloOriginal.style.display = "block";
+            inputName.style.display = "inline-block";
+            btnEditar.style.display = "inline-block"; // mostra botão Editar mesmo em erro
+          });
       };
-      container.appendChild(btn);
     })
     .catch(err => {
-      console.error("Erro ao buscar registro:", err);
+      alert("Registro não encontrado.");
+      tituloOriginal.style.display = "block";
+      inputName.style.display = "inline-block";
+      btnEditar.style.display = "inline-block"; // mostra botão Editar
     });
-
-    document.getElementById("nome-upd").value = "";
 }
