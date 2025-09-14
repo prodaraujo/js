@@ -30,7 +30,7 @@ input {
     border: 0;
 }
 
-.content {
+.form {
     display: flex;
     align-items: center;
     flex-direction: column;
