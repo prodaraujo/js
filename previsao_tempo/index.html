@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do tempo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.freepik.com/128/2932/2932604.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <main class="container">
+        <div class="search">
+            <input type="text" placeholder="Digite o nome da cidade" onkeydown="if(event.key === 'Enter'){clicarBuscar(); }">
+            <button class="btn-search" onclick="clicarBuscar()">
+                <img src="https://www.svgrepo.com/show/488200/find.svg" alt="search">
+            </button>
+        </div>
+
+        <section class="content hidden">
+            <h2>Tempo em <strong class="cidade"></strong></h2>
+
+            <div class="tempo">
+                <img alt="icon" class="img-previsao" src="https://openweathermap.org/img/wn/10d@2x.png">
+                <div>
+                    <p class="temp"><span></span></p>
+                    <p class="parc"></p>
+                </div>
+            </div>
+
+            <div class="info">
+                <p class="p-umidade">Umidade: <span class="umidade"></span></p>
+                <p class="p-vento">Vento: <span class="vento"></span></p>
+            </div>
+        </section>
+
+        
+    </main>
+</body>
+</html>
