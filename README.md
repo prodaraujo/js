@@ -1,43 +1,50 @@
-🧪 JS Playground
+# 🧪 JS Playground
 
-Este repositório contém uma coleção de projetos e experimentos em JavaScript, incluindo CRUDs, previsão do tempo e exercícios diversos. É uma excelente base para quem deseja aprender ou aprimorar suas habilidades em desenvolvimento front-end com HTML, CSS e JavaScript puro.
+![GitHub repo size](https://img.shields.io/github/repo-size/prodaraujo/js?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/prodaraujo/js?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/prodaraujo/js?style=flat-square)
 
-🚀 Funcionalidades
+Este repositório contém uma coleção de projetos e experimentos em JavaScript, incluindo CRUDs e previsão do tempo. É uma excelente base para quem deseja aprender ou aprimorar suas habilidades em desenvolvimento front-end com HTML, CSS e JavaScript puro.
 
-CRUDs: Implementações de operações básicas de criação, leitura, atualização e exclusão.
+---
 
-Previsão do Tempo: Aplicativo que consome APIs para exibir o clima atual.
+## 🚀 Funcionalidades
 
-Exercícios: Soluções para desafios comuns de JavaScript.
+- **CRUDs**: Implementações de operações básicas de criação, leitura, atualização e exclusão.  
+- **Previsão do Tempo**: Aplicativo que consome APIs para exibir o clima atual.
 
-🧰 Tecnologias Utilizadas
+---
 
-O projeto utiliza as seguintes tecnologias:
+## 🧰 Tecnologias Utilizadas
 
-JavaScript
+- JavaScript  
+- HTML  
+- CSS  
 
-HTML
+---
 
-CSS
+## 🖥️ Projetos
 
-🧪 Como Executar
+| Projeto           | Descrição                         | Link |
+|------------------|-----------------------------------|------|
+| CRUD              | Operações básicas de CRUD com JS  | [Acessar](CRUD/index.html) |
+| Previsão do Tempo | Consome API para mostrar clima    | [Acessar](previsao_tempo/index.html) |
 
-Clone o repositório:
+---
 
+## 🧪 Como Executar
+
+1. Clone o repositório:
+
+```bash
 git clone https://github.com/prodaraujo/js.git
 
-
-Navegue até o diretório do projeto:
-
 cd js
+```
 
+## 📄 Estrutura do Repositório
 
-Abra os arquivos .html em seu navegador para visualizar os projetos.
-
-📄 Estrutura do Repositório
-
-O repositório está organizado da seguinte forma:
-
+js/
 ├── CRUD/
 │   ├── index.html
 │   ├── style.css
@@ -45,28 +52,30 @@ O repositório está organizado da seguinte forma:
 ├── previsao_tempo/
 │   ├── index.html
 │   ├── style.css
-│   └── script.js
-└── exercicios/
-    ├── desafio1.html
-    ├── desafio2.html
-    └── desafio3.html
+│ [  └── script.js
 
-📌 Como Contribuir
 
+## 📌 Como Contribuir
 Contribuições são bem-vindas! Para contribuir:
 
-Faça um fork deste repositório.
+# Faça um fork do repositório
+git fork https://github.com/prodaraujo/js.git
 
-Crie uma branch para sua feature (git checkout -b feature/nome-da-feature).
+# Crie uma branch para sua feature
+git checkout -b feature/nome-da-feature
 
-Commit suas alterações (git commit -am 'Adiciona nova feature').
+# Commit suas alterações
+git commit -am "Adiciona nova feature"
 
-Push para a branch (git push origin feature/nome-da-feature).
+# Push para a branch
+git push origin feature/nome-da-feature
 
 Abra um Pull Request.
 
-📬 Contato
 
-GitHub: prodaraujo
+## 📬 Contato
 
+GitHub: [prodaraujo](https://github.com/prodaraujo)
+Instagram: [@prod_araujo](https://www.instagram.com/prod_araujo/)
+LinkedIn: [Paulo Araújo](https://www.linkedin.com/in/pauloara%C3%BAjo/)
 E-mail: paulora02@gmail.com
