@@ -58,16 +58,16 @@ js/
 ## 📌 Como Contribuir
 Contribuições são bem-vindas! Para contribuir:
 
-# Faça um fork do repositório
+### Faça um fork do repositório
 git fork https://github.com/prodaraujo/js.git
 
-# Crie uma branch para sua feature
+### Crie uma branch para sua feature
 git checkout -b feature/nome-da-feature
 
-# Commit suas alterações
+### Commit suas alterações
 git commit -am "Adiciona nova feature"
 
-# Push para a branch
+### Push para a branch
 git push origin feature/nome-da-feature
 
 Abra um Pull Request.
