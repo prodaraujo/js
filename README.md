@@ -44,6 +44,7 @@ cd js
 
 ## 📄 Estrutura do Repositório
 
+```bash
 js/
 ├── CRUD/
 │   ├── index.html
@@ -54,6 +55,8 @@ js/
     ├── index.html
     ├── style.css
     └── script.js
+```
+
 
 
 ## 📌 Como Contribuir
