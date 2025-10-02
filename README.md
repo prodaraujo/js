@@ -49,10 +49,11 @@ js/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
-├── previsao_tempo/
-│   ├── index.html
-│   ├── style.css
-│ [  └── script.js
+│
+└── previsao_tempo/
+    ├── index.html
+    ├── style.css
+    └── script.js
 
 
 ## 📌 Como Contribuir
